@@ -1,0 +1,46 @@
+[
+  {
+    "@class":"computer",
+    "name":"player",
+    "strategy":{
+      "@class":"minimax",
+      "evaluator":{
+        "@class":"evaluator",
+        "considerEnemyPosition":true,
+        "coherenceWeight":3,
+        "distanceFromCenterWeight":8,
+        "formationBreakWeight":10,
+        "marblesConqueredWeight":800,
+        "immediateMarbleCapWeight":0,
+        "singleMarbleCapWeight":30,
+        "doubleMarbleCapWeight":50
+      },
+      "miniBuilder":{
+        "@class":"builder",
+        "dfs":true,
+        "depthBoundIddfs":false,
+        "depth":3,
+        "timeBoundIddfs":false,
+        "time":15,
+        "hashing":false,
+        "windowNarrowing":false,
+        "evaluateSorting":true,
+        "evaluateSortingMinDepth":1,
+        "evaluateSortingMaxDepth":2,
+        "historyHeuristicSorting":true,
+        "historyHeuristicSortingMinDepth":3,
+        "historyHeuristicSortingMaxDepth":4,
+        "marbleOrdering":true,
+        "marbleOrderingMinDepth":5,
+        "marbleOrderingMaxDepth":5,
+        "iterationSorting":false,
+        "iterationSortingMinDepth":3,
+        "iterationSortingMaxDepth":5
+      }
+    }
+  },
+  {
+    "@class":"replay",
+    "name":"same player"
+  }
+]
